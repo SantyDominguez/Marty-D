@@ -5,8 +5,8 @@ h1 {
 
 h2 {
     color: #db1043;
-    font-size: 35px;
-
+    font-size: 2em;
+    text-align: center;
 }
 label {
     color: #db1043;
@@ -27,6 +27,22 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+    
+}
+.container {
+    position: sticky;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;  
+    background-color: rgba(255, 255, 255, 0.9); /* Color de fondo semi-transparente */
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    box-shadow: #292525;
+    margin-top: 30%;
+}
+
 
 form {
     padding: 50px 55px;
@@ -229,5 +245,57 @@ a:hover {
 
     .footer li {
         margin: 10px 0; /* Espacio entre elementos del footer en dispositivos móviles */
-    }
+    }
+
+    .container {
+        width: 80%;  
+        max-width: 400px;
+        background-color: rgba(255, 255, 255, 0.9); 
+        border-radius: 20px;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+        box-shadow: #292525;
+        margin-top: 0;
+        margin-bottom: 10px;
+    }
+
+    form {
+        padding: 20px; 
+        text-align: center;
+        width: 100%;
+        box-sizing: border-box; 
+    }
+    
+    .input-group {
+        display: flex;
+        flex-direction: column;
+        text-align: left;
+    }
+    
+    input, textarea {
+        width: 100%; 
+        padding: 17px 25px;
+        border-radius: 20px;
+        margin-bottom: 20px;
+        background-color: #ffffff;
+        border: 2px solid #000000;
+        color: #000000;
+        box-sizing: border-box; 
+    }
+    
+    .btn {
+        font-size: 16px;
+        color: #fff;
+        border: 0;
+        border-radius: 25px;
+        background-color: #db1043;
+        box-shadow: 0 0 20px #e0305c;
+        cursor: pointer;
+        width: 100%; 
+        box-sizing: border-box; 
+    }
+    
+    .btn:hover {
+        background-color: #e0305c;
+    }
+
 }
