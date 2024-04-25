@@ -1,36 +1,135 @@
+/* Estilos generales */
+h1 {
+    color: rgb(235, 15, 162);
+}
+
 h2 {
     color: #db1043;
+    font-size: 35px;
+
 }
-section {
+label {
     color: #db1043;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 15px;
 }
 
-img {
-    height: 100px;
-    width: 200px;
-    padding-left: 42%;
+p {
+    color: #fff8f8;
 }
 
+
+body {
+    background-color: rgb(0, 0, 0);
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    padding: 50px 55px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    border-radius: 20px;
+    text-align: center;
+    width: 340px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+input, textarea {
+    padding: 17px 25px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    background-color: #ffffff;
+    border: 2px solid #000000;
+    color: #000000;
+}
+
+.btn {
+    font-size: 16px;
+    color: #fff;
+    border: 0;
+    border-radius: 25px;
+    background-color: #db1043;
+    box-shadow: 0 0 20px #e0305c;
+    cursor: pointer;
+}
+
+.btn :hover {
+    background-color:#e0305c;
+}
+
+@media (max-width: 750px) {
+    body {
+        padding: 30px;
+    }
+    form {
+        padding: 50px 30px;
+        width: 100%;
+
+    }
+    input {
+        padding: 15px;
+    }
+
+    
+}
+
+
+/* Estilos de la barra de navegación */
+.bisque {
+    background-color: #000000;
+}
 nav {
     border-bottom: 2px solid #ccc;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     background-color: #000000;
     position: sticky;
     top: 0;
+    flex-grow: 1;
+    position: relative;
+    z-index: 9999;
 }
 
-p {
-    color: #fff8f8;
+nav img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+    max-height: 100px; /* Ajusta la altura máxima del logo */
+    width: auto; /* Ajusta el ancho automáticamente */
 }
-h1 {
-    color: rgb(235, 15, 162);
-}
+
+
 
 nav ul {
     list-style-type: none;
     margin: 0;
     padding: 30px 20px;
     text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px; /* Espacio entre elementos de la barra de navegación */
+}
+
+nav ul li a {
+    display: block;
+    padding: 10px 20px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    background-color: #f0e9e9;
+    
 }
 
 a {
@@ -46,48 +145,44 @@ a:hover {
     transition: 0.15s;
 }
 
-
-nav ul li {
-    display: inline;
-}
-
-nav ul li a {
-    display: block;
-    padding: 10px 20px;
-    color: white;
-    text-decoration: none;
-}
-
-nav ul li a:hover {
-    background-color: #f0e9e9;
-    justify-content: space-between;
-}
-
-body {
-    background-color: rgb(0, 0, 0);
-}
+/* Estilos del footer */
 .footer {
     background-color: #000000;
     color: rgb(255, 255, 255);
     padding: 20px;
-    border-top: 2px solid #ffffff; /* Agrega una barra en la parte superior */
+    border-top: 2px solid #ffffff;
     text-align: center;
 }
-iframe {
-    max-width: 100%;
-    overflow: none;
-    height: 400px;
-    width: 700px;
-    padding: 100px 20%;
+
+.footer ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
 }
+
+.footer li {
+    margin: 0 10px;
+    list-style-type: none;
+}
+
+.footer a {
+    display: flex;
+    align-items: center;
+}
+
+.footer p {
+    margin-top: 20px;
+    color: #fff;
+}
+
+/* Estilos de los símbolos en el footer */
 .img_1 {
     width: 50px;
     height: 50px;
     padding: 10px;
-    list-style-type: none;
-    margin: 0;
-    text-align: center;
 }
+
 .list_ {
     display: inline-block;
     padding: 10px 20px;
@@ -95,8 +190,44 @@ iframe {
     text-decoration: none;
     position: static;
 }
+
+/* Otros estilos */
 .imagenes-2 {
-    width: 300px;
-    height: 300px;
-    padding: 10px;
+    width: 100%;
+    max-width: 300px;
+    height: auto;
+}
+
+.carousel-inner,
+.carousel-item {
+    height: 500px;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Estilos para dispositivos móviles */
+@media only screen and (max-width: 600px) {
+    nav ul {
+        padding: 10px 0; /* Ajusta el espacio entre elementos de la barra de navegación */
+    }
+
+    nav img {
+        max-height: 60px; /* Ajusta la altura máxima del logo para dispositivos móviles */
+    }
+
+    nav ul li {
+        margin: 0 5px; /* Espacio reducido entre elementos de la barra de navegación en móviles */
+    }
+
+    .footer ul {
+        flex-direction: column; /* Coloca los elementos del footer en columnas */
+    }
+
+    .footer li {
+        margin: 10px 0; /* Espacio entre elementos del footer en dispositivos móviles */
+    }
 }
